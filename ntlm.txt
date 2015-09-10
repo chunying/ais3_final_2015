@@ -1,0 +1,8 @@
+
+ais3{6311eea3dabc403cdd3a68e0053b803c}
+
+solve the hash using rcracki_mt from https://www.freerainbowtables.com/
+
+choose a proper table, for example,
+ntlm_loweralpha-space#1-9_0_10000x67108864_distrrtgen[p][i]_07.rti2
+
