@@ -7,15 +7,19 @@ from sys import *
 ## pwn context
 context(arch = 'i386', os = 'linux')
 
+#def genall():
+#	r = [];
+#	for i in range(10):
+#		for j in range(10):
+#			for k in range(10):
+#				for l in range(10):
+#					if i != j and i != k and i != l and j != k and j != l and k != l:
+#						r.append(chr(ord('0')+i) + chr(ord('0')+j) + chr(ord('0')+k) + chr(ord('0')+l))
+#	return r;
+
+# an alternative from Inndy
 def genall():
-	r = [];
-	for i in range(10):
-		for j in range(10):
-			for k in range(10):
-				for l in range(10):
-					if i != j and i != k and i != l and j != k and j != l and k != l:
-						r.append(chr(ord('0')+i) + chr(ord('0')+j) + chr(ord('0')+k) + chr(ord('0')+l))
-	return r;
+	return [ n for n in ("%.4d" % i for i in range(10000)) if len(set(n)) == len(n) ]
 
 def match(r, s, a, b):
 	mya = 0
